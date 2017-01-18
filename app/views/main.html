@@ -1,0 +1,67 @@
+<div class="container-fluid">
+  <div class="row" style="padding-top:40px;">
+    <div class="col-md-2">
+      <select class="form-control " ng-model="searchBy">
+        <option value="">Search By</option>
+        <option value="dealID">Deal Id</option>
+        <option value="trxId">Transaction Id</option>
+      </select>
+    </div>
+    <div class="col-md-4">
+      <input type="text" class="form-control " ng-model="searchText">
+    </div>
+    <div class="col-md-4">
+      <button type="button" class="btn btn-default "  class="form-control" ng-click="search()">Search</button>
+    </div>
+  </div>
+  <div class="row" style="padding-top: 40px;">
+    <div class="col-md-12">
+      <table class="table table-bordered">
+        <thead>
+            <th valign="middle" style="text-align:center;max-width:100px;">Transaction ID</th>
+            <th valign="middle" style="text-align:center;max-width:100px;">Source Transaction ID</th>
+            <th valign="middle" style="text-align:center;max-width:100px;">Upstream Transaction ID</th>
+            <th valign="middle" style="text-align:center;max-width:100px;">Trx Header ID</th>
+            <th valign="middle" style="text-align:center;max-width:100px;">Deal ID</th>
+            <th valign="middle" style="text-align:center;max-width:100px;">Trx Type</th>
+            <th valign="middle" style="text-align:center;max-width:100px;">Part Number</th>
+            <th valign="middle" style="text-align:center;max-width:100px;">Bill To</th>
+            <th valign="middle" style="text-align:center;max-width:100px;">Ship To</th>
+            <th valign="middle" style="text-align:center;max-width:100px;">Sold To</th>
+            <th valign="middle" style="text-align:center;max-width:100px;">Po Number</th>
+            <th ng-show="submitShow" valign="middle" style="text-align:center;max-width:100px;">Agent</th>
+            <th ng-show="submitShow" valign="middle" style="text-align:center;max-width:100px;">Node</th>
+            <th ng-show="submitShow" valign="middle" style="text-align:center;max-width:180px;">Commissionable Agent</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="text-align:left;font-size:10px;max-width:100px;">{{result.trxId}}</td>
+            <td style="text-align:left;font-size:10px;max-width:100px;">{{result.srctrxId}}</td>
+            <td style="text-align:left;font-size:10px;max-width:100px;">{{result.trxUpID}}</td>
+            <td style="text-align:left;font-size:10px;max-width:100px;">{{result.trxHeaderID}}</td>
+            <td style="text-align:left;font-size:10px;max-width:100px;">{{result.dealID}}</td>
+            <td style="text-align:left;font-size:10px;max-width:100px;">{{result.trxSrcType}}</td>
+            <td style="text-align:left;font-size:10px;max-width:100px;">{{result.partNum}}</td>
+            <td style="text-align:left;font-size:10px;max-width:100px;">{{result.billCustDet}}</td>
+            <td style="text-align:left;font-size:10px;max-width:110px;">{{result.shipCustDet}}</td>
+            <td style="text-align:left;font-size:10px;max-width:100px;">{{result.soldCustDet}}</td>
+            <td style="text-align:left;font-size:10px;max-width:100px;">{{result.poNum}}</td>
+            <td ng-show="submitShow" style="text-align:left;font-size:10px;">{{result.resName}}</td>
+            <td ng-show="submitShow" style="text-align:left;font-size:10px;">{{result.grpName}}</td>
+            <td ng-show="submitShow" style="text-align:left;font-size:10px;max-width:180px;"><div></div>{{result.agent}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+      
+    </div>
+    <div class="col-md-2">
+      <button type="button" class="btn btn-default" ng-click="submit()">Submit</button>
+    </div>
+    
+  </div>
+</div>
