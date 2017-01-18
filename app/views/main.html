@@ -18,37 +18,37 @@
     <div class="col-md-12">
       <table class="table table-bordered">
         <thead>
-            <th valign="middle" style="text-align:center;max-width:100px;">Transaction ID</th>
-            <th valign="middle" style="text-align:center;max-width:100px;">Source Transaction ID</th>
-            <th valign="middle" style="text-align:center;max-width:100px;">Upstream Transaction ID</th>
-            <th valign="middle" style="text-align:center;max-width:100px;">Trx Header ID</th>
-            <th valign="middle" style="text-align:center;max-width:100px;">Deal ID</th>
-            <th valign="middle" style="text-align:center;max-width:100px;">Trx Type</th>
-            <th valign="middle" style="text-align:center;max-width:100px;">Part Number</th>
-            <th valign="middle" style="text-align:center;max-width:100px;">Bill To</th>
-            <th valign="middle" style="text-align:center;max-width:100px;">Ship To</th>
-            <th valign="middle" style="text-align:center;max-width:100px;">Sold To</th>
-            <th valign="middle" style="text-align:center;max-width:100px;">Po Number</th>
-            <th ng-show="submitShow" valign="middle" style="text-align:center;max-width:100px;">Agent</th>
-            <th ng-show="submitShow" valign="middle" style="text-align:center;max-width:100px;">Node</th>
-            <th ng-show="submitShow" valign="middle" style="text-align:center;max-width:180px;">Commissionable Agent</th>
+            <th valign="middle" style="text-align:center;max-width:80px;font-size:12px;word-wrap: break-word">Transaction ID</th>
+            <th valign="middle" style="text-align:center;max-width:100px;font-size:12px;word-wrap: break-word">Source Transaction ID</th>
+            <th valign="middle" style="text-align:center;max-width:100px;font-size:12px;word-wrap: break-word">Upstream Transaction ID</th>
+            <th valign="middle" style="text-align:center;max-width:100px;font-size:12px;word-wrap: break-word">Trx Header ID</th>
+            <th valign="middle" style="text-align:center;max-width:100px;font-size:12px;word-wrap: break-word">Deal ID</th>
+            <th valign="middle" style="text-align:center;max-width:100px;font-size:12px;word-wrap: break-word">Trx Type</th>
+            <th valign="middle" style="text-align:center;max-width:100px;font-size:12px;word-wrap: break-word">Part Number</th>
+            <th valign="middle" style="text-align:center;max-width:100px;font-size:12px;word-wrap: break-word">Bill To</th>
+            <th valign="middle" style="text-align:center;max-width:130px;font-size:12px;word-wrap: break-word">Ship To</th>
+            <th valign="middle" style="text-align:center;max-width:100px;font-size:12px;word-wrap: break-word">Sold To</th>
+            <th valign="middle" style="text-align:center;max-width:100px;font-size:12px;word-wrap: break-word">Po Number</th>
+            <th valign="middle" style="text-align:center;max-width:100px;font-size:12px;word-wrap: break-word" ng-show="submitShow">Agent</th>
+            <th valign="middle" style="text-align:center;max-width:100px;font-size:12px;word-wrap: break-word" ng-show="submitShow">Node</th>
+            <th valign="middle" style="text-align:center;max-width:180px;font-size:12px;word-wrap: break-word" ng-show="submitShow">Commissionable Agent</th>
         </thead>
         <tbody>
           <tr>
-            <td style="text-align:left;font-size:10px;max-width:100px;">{{result.trxId}}</td>
-            <td style="text-align:left;font-size:10px;max-width:100px;">{{result.srctrxId}}</td>
-            <td style="text-align:left;font-size:10px;max-width:100px;">{{result.trxUpID}}</td>
-            <td style="text-align:left;font-size:10px;max-width:100px;">{{result.trxHeaderID}}</td>
-            <td style="text-align:left;font-size:10px;max-width:100px;">{{result.dealID}}</td>
-            <td style="text-align:left;font-size:10px;max-width:100px;">{{result.trxSrcType}}</td>
-            <td style="text-align:left;font-size:10px;max-width:100px;">{{result.partNum}}</td>
-            <td style="text-align:left;font-size:10px;max-width:100px;">{{result.billCustDet}}</td>
-            <td style="text-align:left;font-size:10px;max-width:110px;">{{result.shipCustDet}}</td>
-            <td style="text-align:left;font-size:10px;max-width:100px;">{{result.soldCustDet}}</td>
-            <td style="text-align:left;font-size:10px;max-width:100px;">{{result.poNum}}</td>
-            <td ng-show="submitShow" style="text-align:left;font-size:10px;">{{result.resName}}</td>
-            <td ng-show="submitShow" style="text-align:left;font-size:10px;">{{result.grpName}}</td>
-            <td ng-show="submitShow" style="text-align:left;font-size:10px;max-width:180px;"><div></div>{{result.agent}}</td>
+            <td style="text-align:left;font-size:10px;max-width:80px;word-wrap: break-word">{{result.trxId}}</td>
+            <td style="text-align:left;font-size:10px;max-width:100px;word-wrap: break-word">{{result.srctrxId}}</td>
+            <td style="text-align:left;font-size:10px;max-width:100px;word-wrap: break-word">{{result.trxUpID}}</td>
+            <td style="text-align:left;font-size:10px;max-width:100px;word-wrap: break-word">{{result.trxHeaderID}}</td>
+            <td style="text-align:left;font-size:10px;max-width:100px;word-wrap: break-word">{{result.dealID}}</td>
+            <td style="text-align:left;font-size:10px;max-width:100px;word-wrap: break-word">{{result.trxSrcType}}</td>
+            <td style="text-align:left;font-size:10px;max-width:100px;word-wrap: break-word">{{result.partNum}}</td>
+            <td style="text-align:left;font-size:10px;max-width:100px;word-wrap: break-word">{{result.billCustDet}}</td>
+            <td style="text-align:left;font-size:10px;max-width:130px;word-wrap: break-word">{{result.shipCustDet}}</td>
+            <td style="text-align:left;font-size:10px;max-width:100px;word-wrap: break-word">{{result.soldCustDet}}</td>
+            <td style="text-align:left;font-size:10px;max-width:100px;word-wrap: break-word">{{result.poNum}}</td>
+            <td style="text-align:left;font-size:10px;max-width:100px;word-wrap: break-word" ng-show="submitShow">{{result.resName}}</td>
+            <td style="text-align:left;font-size:10px;max-width:100px;word-wrap: break-word" ng-show="submitShow">{{result.grpName}}</td>
+            <td style="text-align:left;font-size:11px;max-width:180px;word-wrap: break-word" ng-show="submitShow">{{result.agent}}</td>
           </tr>
         </tbody>
       </table>
@@ -57,7 +57,6 @@
   <div class="row">
     <div class="col-md-2"></div>
     <div class="col-md-8">
-      
     </div>
     <div class="col-md-2">
       <button type="button" class="btn btn-default" ng-click="submit()">Submit</button>

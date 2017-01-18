@@ -18,12 +18,16 @@ angular.module('angularOracleApp')
     	if(!$scope.searchText){
     		$scope.searchText="";
     	}
-    	$http.get('http://10.154.89.51:8080/CAAS/service/user/'+$scope.searchText).then(function(success){
+    	if(!$scope.searchBy){
+    		$scope.searchBy="";
+    	}
+    	$http.get('http://10.154.89.51:8080/CAAS/service/user/'+$scope.searchText+'/'+$scope.searchBy).then(function(success){
+    		//$http.get('http://10.154.89.51:8080/CAAS/service/user/'+$scope.searchText).then(function(success){
     		console.log('the success',success);
     		if(success.data.length>0){
     			$scope.result=success.data[0];
     			//$scope.result.agent=[];
-    			$scope.result.agent = $scope.result.commAgent.replace(/~/g,"  \n\n");
+    			$scope.result.agent = $scope.result.commAgent.replace(/~/g," \n\n");
     		}else{
     			$scope.result=success.data;
     			//$scope.result.agent=[];
